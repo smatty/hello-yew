@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello, Yew!</title>
+<link rel="modulepreload" href="/hello-yew/hello-yew-3be9b62f02d21e2e.js" crossorigin="anonymous" integrity="sha384-6GNY27+C3TQDGeGgqVUYq6urXsNILmk4UCp7t0ObmcO+mrIgMOrNxEo99xWHkvCL"><link rel="preload" href="/hello-yew/hello-yew-3be9b62f02d21e2e_bg.wasm" crossorigin="anonymous" integrity="sha384-oWpNF26XhlkKnYnxHXQERLltw8bl9QysQHyXfkAxOAX+xfz7Sn7BAsUPBtCjP26S" as="fetch" type="application/wasm"></head>
+<body>
+    
+
+<script type="module">
+import init, * as bindings from '/hello-yew/hello-yew-3be9b62f02d21e2e.js';
+const wasm = await init({ module_or_path: '/hello-yew/hello-yew-3be9b62f02d21e2e_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+</html>
